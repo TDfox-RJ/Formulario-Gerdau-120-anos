@@ -1,0 +1,153 @@
+<!-- @format -->
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gerdau 120 anos</title>
+        <link rel="stylesheet" href="./css/index.css" />
+        <script type="text/javascript" src="./js/translator.js"></script>
+        <script type="text/javascript" src="./js/validator.js"></script>
+        <script type="text/javascript" src="./js/index.js"></script>
+    </head>
+    <body>
+        <div id="root" class="container-fluid">
+            <div id="info_wrapper">
+                <img src="./assets/images/Ativo-1logo.svg" />
+                <p id="first_p" class="gerdau-blue-txt">
+                    Neste ano em que celebramos nossa história de crescimento,
+                    queremos entender como pensa quem é parte essencial desta
+                    história: você.
+                </p>
+                <p id="second_p" class="gerdau-blue-txt">
+                    Preencha o formulário ao lado e participe de mais uma ação
+                    de celebração e colaboração em equipe da Gerdau.
+                </p>
+                <p id="third_p" class="gerdau-blue-txt">O futuro se molda.</p>
+            </div>
+            <div id="form_wrapper">
+                <div class="row">
+                    <h4
+                        class="language-selector active"
+                        id="pt"
+                        data-language="Portuguese"
+                    >
+                        PT
+                    </h4>
+                    <h4
+                        class="language-selector"
+                        id="es"
+                        data-language="Spanish"
+                    >
+                        ES
+                    </h4>
+                    <h4
+                        class="language-selector"
+                        id="en"
+                        data-language="English"
+                    >
+                        EN
+                    </h4>
+                </div>
+                <form>
+                    <div class="row">
+                        <input
+                            type="text"
+                            id="name_input"
+                            name="name"
+                            placeholder="Nome:"
+                            class="input-default half-input gerdau-blue-txt"
+                            required
+                        />
+                        <input
+                            type="email"
+                            id="email_input"
+                            name="email"
+                            placeholder="E-mail:"
+                            class="input-default half-input gerdau-blue-txt"
+                            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+                            required
+                        />
+                    </div>
+
+                    <div class="row">
+                        <input
+                            type="text"
+                            id="function_input"
+                            name="function"
+                            placeholder="Função:"
+                            class="input-default half-input gerdau-blue-txt"
+                            required
+                        />
+                        <input
+                            type="text"
+                            id="personal_number_input"
+                            name="personal_number"
+                            placeholder="Número Pessoal:"
+                            class="input-default half-input gerdau-blue-txt"
+                            required
+                        />
+                    </div>
+
+                    <div class="row">
+                        <select
+                            id="country_select"
+                            class="input-default half-input gerdau-blue-txt"
+                            required
+                        >
+                            <option disabled selected>-País-</option>
+                            <option>América do Norte</option>
+                            <option>Argentina</option>
+                            <option>Brasil</option>
+                            <option>Colômbia</option>
+                            <option>México</option>
+                            <option>Peru</option>
+                            <option>República Dominicana</option>
+                            <option>Uruguai</option>
+                            <option>Venezuela</option>
+                        </select>
+                        <input
+                            type="text"
+                            id="unity_input"
+                            name="unity"
+                            placeholder="Unidade:"
+                            class="input-default half-input gerdau-blue-txt"
+                            required
+                        />
+                    </div>
+
+                    <div class="row">
+                        <p
+                            id="spacer_text"
+                            class="gerdau-blue-txt gerdau-yellow-bg"
+                        >
+                            Como você enxerga a gerdau para os próximos 120
+                            anos?
+                        </p>
+                    </div>
+
+                    <div class="row">
+                        <textarea
+                            class="input-default gerdau-blue-txt"
+                            id="message_input"
+                            name="message"
+                            placeholder="Digite Aqui:"
+                            maxlength="120"
+                            required
+                        ></textarea>
+                    </div>
+
+                    <div class="row">
+                        <button
+                            type="button"
+                            id="btn_enviar"
+                            class="btn-default gerdau-blue-txt"
+                        >
+                            Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
