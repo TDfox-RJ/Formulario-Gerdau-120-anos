@@ -1,34 +1,41 @@
 /** @format */
 
-let email_domains = [];
+let email_domains = [
+  "@gerdau.com",
+  "@gerdau.com.br",
+  "@gerdau.com.co",
+  "@gerdaumetaldom.com",
+  "@siderperu.com.pe",
+  "@sizuca.com.ve",
+  "@gerdau.com.uy",
+  "@sider.com.pe",
+  "@gerdau.com.ar",
+  "@gerdaudiaco.com",
+  "@gerdaucorsa.com.mx",
+];
 
 function validate() {
-    let form = document.querySelector("form");
-    let form_data = new FormData(form);
+  let form = document.querySelector("form");
+  let form_data = new FormData(form);
 
-    if (!form.checkValidity()) {
-        form.reportValidity();
-        return false;
-    }
+  validateEmail(form_data.get("email"));
 
-    if (validateEmail(form_data.get("email"))) {
-        form.reportValidity();
-        return false;
-    }
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return false;
+  }
 
-    return true;
+  return true;
 }
 
 function validateEmail(email) {
-    if (
-        email.indexOf("gerdau") === -1 ||
-        !email_domains.includes(email.substring(0, email.length - 2))
-    ) {
-        document
-            .querySelector("#email_input")
-            .setCustomValidity("O email precisa ser o da Gerdau.");
-        return false;
-    }
-
-    return true;
+  if (
+    !email_domains.includes(email.substring(email.indexOf("@"), email.length))
+  ) {
+    document
+      .querySelector("#email_input")
+      .setCustomValidity("O email precisa ser da Gerdau.");
+  } else {
+    document.querySelector("#email_input").setCustomValidity("");
+  }
 }
